@@ -1,4 +1,4 @@
-Mock Company Portfolio
+Machina.co - Mock Company Portfolio
 
 Made with HTML, CSS/SASS and JS
 

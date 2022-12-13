@@ -13,6 +13,9 @@ body {
     align-items: center;
     position: relative;
 
+    h1 {
+        margin-bottom: 1rem;
+    }
 
     header {
         text-align: center;
@@ -21,7 +24,8 @@ body {
         max-width: 80rem;
         display: flex;
         flex-direction: column;
-        row-gap: 1.5rem;
+        row-gap: 1rem;
+
 
         p {
             line-height: 1.35;

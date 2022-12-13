@@ -12,7 +12,7 @@ main {
     h1 {
         @include h1;
         @include borderbottom;
-        padding: 0 10rem 0.5rem;
+        padding: 0 10rem 1rem;
     }
 
     h2 {
@@ -47,7 +47,7 @@ main {
         grid-template-columns: repeat(3, 1fr);
         gap: 3rem;
         perspective: 400px;
-        margin: 2rem;
+        margin: 3rem;
         max-width: 95rem;
 
         .main__project-card {

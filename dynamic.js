@@ -12,10 +12,16 @@ function getNewArticle() {
     const allArray = [ai, os, wp, fe];
 
     list.addEventListener("click", (event) => {
-        if (event.path[0].textContent == "Artificial Intelligence and Machine Learning" |
-            event.path[0].textContent == "Open Source Frameworks" |
-            event.path[0].textContent == "Web Programming" |
-            event.path[0].textContent == "Front-end Technologies") {
+        let clickPath = event.composedPath()[0].textContent || event.path[0].textContent;
+
+        if (clickPath == "Artificial Intelligence and Machine Learning" ||
+            clickPath == "Open Source Frameworks" ||
+            clickPath == "Web Programming" ||
+            clickPath == "Front-end Technologies") {
+
+            // Class
+            let currentPath = event.composedPath()[1] || event.path[1];
+
             // Remove ID
             listArray.map((item) => {
                 if (item.id === "current") {
@@ -24,7 +30,7 @@ function getNewArticle() {
             });
 
             // Add ID
-            event.path[1].setAttribute("id", "current");
+            currentPath.setAttribute("id", "current");
 
             // Remove all open classList
             allArray.map((item) => {
@@ -34,7 +40,7 @@ function getNewArticle() {
             });
 
             // Add open classList 
-            switch (event.path[0].textContent) {
+            switch (clickPath) {
                 case "Artificial Intelligence and Machine Learning":
                     ai.classList.add("open");
                     break;
@@ -46,6 +52,9 @@ function getNewArticle() {
                     break;
                 case "Front-end Technologies":
                     fe.classList.add("open");
+                    break;
+                default:
+                    console.log("Broke");
                     break;
             }
         }

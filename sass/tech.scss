@@ -1,0 +1,175 @@
+/* SCSS Imports */
+@import "imports";
+@import "landing";
+
+/* Main-Tech */
+body {
+    overflow-x: hidden;
+}
+
+.main__tech-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+
+    header {
+        text-align: center;
+        padding-top: 3.6rem;
+        margin: 5rem 2rem 1rem;
+        max-width: 80rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+
+        p {
+            line-height: 1.35;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        header {
+            margin: 2rem 2rem 1rem;
+        }
+    }
+
+    button {
+        @include button;
+        @include neutral-btn;
+        margin: 1rem 0 3rem;
+
+        a {
+            font-size: 1.25rem;
+            color: $mid-black;
+        }
+    }
+
+    button:hover {
+        background-color: darkred;
+        border: 2px solid darkred;
+        
+        a {
+            color: $white;
+        }
+    }
+
+    h1 {
+        @include h1;
+        @include borderbottom;
+        padding: 0 15vw 1rem;
+    }
+
+    #current {
+        border-left: 2px solid $red;
+    }
+
+    .main__tech-feature-container {
+        background-image: radial-gradient(rgb(170, 42, 20), rgb(92, 13, 13));
+        margin: 2.5rem;
+        max-width: 65rem;
+        display: flex;
+        padding: 4rem;
+        border-radius: .25rem;
+        column-gap: 2rem;
+
+        .main__tech-title-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: $white;
+            transition: all .15s;
+
+            li {
+                padding-left: .5rem;
+                border-left: 2px solid transparent;
+            }
+
+            p {
+                cursor: pointer;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .main__tech-blurb-container {
+            flex: 2;
+            background-color: $white;
+            border-top-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            padding: 4rem;
+            display: none;
+
+            h2 {
+                margin-bottom: 1rem;
+            }
+
+            p {
+                margin-bottom: .5rem;
+                line-height: 1.35;
+            }
+        }
+
+        .main__tech-blurb-container.artificial-intelligence.open,
+        .main__tech-blurb-container.open-source.open,
+        .main__tech-blurb-container.web-progrmaming.open,
+        .main__tech-blurb-container.front-end.open {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .main__tech-feature-container {
+            flex-direction: column;
+            padding: 2rem;
+
+            .main__tech-title-container {
+                align-self: flex-start;
+            }
+
+            .main__tech-blurb-container {
+                padding: 2rem;
+            }
+        }
+    }
+
+    .dots.tech {
+        position: absolute;
+        z-index: -1;
+
+        padding: 10rem;
+        height: fit-content;
+        border-radius: 100%;
+        background-image: radial-gradient(circle, #d47e7e 1px, rgba(0, 0, 0, 0) 1px);
+    }
+
+    .dots.tech.one {
+        top: -5rem;
+        left: 5rem;
+    }
+
+    .dots.tech.two {
+        bottom: -5rem;
+        right: 5rem;
+    }
+
+    .circle.tech {
+        z-index: -1;
+        padding: 20vw;
+        position: absolute;
+    }
+
+    .circle.tech.one {
+        left: 15rem;
+        bottom: 2rem;
+    }
+
+    .circle.tech.two {
+        right: -5rem;
+        top: -5rem;
+    }
+
+    // ADD ANIMATION BETWEEN RENDERS
+
+}

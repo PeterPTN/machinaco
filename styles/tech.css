@@ -1,0 +1,536 @@
+@charset "UTF-8";
+/* SCSS Imports */ /* Fonts */
+/* Colors */
+/* Mixins */
+/* SCSS Imports */ /* Fonts */
+/* Colors */
+/* Mixins */
+/* Hero-Landing */
+.hero-container.landing {
+  height: 100vh;
+}
+
+@media screen and (max-width: 600px) {
+  .hero-container.landing {
+    height: 80vh;
+  }
+}
+.hero-container .hero__landing-image-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-image: url("../images/face.jpg");
+  background-color: rgba(114, 99, 84, 0.973);
+  background-blend-mode: luminosity;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 3.6rem;
+}
+.hero-container .hero__landing-image-wrapper .hero__landing-image-container {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+  background-image: linear-gradient(rgb(20, 20, 20), 45%, rgba(0, 0, 0, 0.123));
+  height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 1450px) {
+  .hero-container .hero__landing-image-wrapper .hero__landing-image-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.hero-container .hero__landing-image-wrapper * {
+  color: rgb(248, 248, 248);
+  font-family: arial, sans-serif;
+}
+.hero-container .hero__landing-image-wrapper .hero__landing-main-tag {
+  flex: 1;
+  text-transform: uppercase;
+  margin: 1.5rem 15.5rem 2rem 7.25rem;
+  padding: 3rem 3rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.116);
+  border-top: 2px solid rgba(255, 255, 255, 0.116);
+}
+.hero-container .hero__landing-image-wrapper .hero__landing-main-tag h3 {
+  font-size: 8.5vw;
+  color: rgb(248, 248, 248);
+  letter-spacing: -13px;
+  line-height: 0.85;
+  cursor: default;
+}
+.hero-container .hero__landing-image-wrapper .hero__landing-main-tag h3:first-child {
+  color: red;
+}
+.hero-container .hero__landing-image-wrapper .hero__landing-main-tag h3:nth-child(even) {
+  padding-left: 5rem;
+}
+@media screen and (max-width: 1450px) {
+  .hero-container .hero__landing-image-wrapper .hero__landing-main-tag {
+    padding: 2rem 2rem;
+    margin: 1.5rem 10.5rem 2rem 4.25rem;
+  }
+  .hero-container .hero__landing-image-wrapper .hero__landing-main-tag h3 {
+    font-size: 8rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .hero-container .hero__landing-image-wrapper .hero__landing-main-tag {
+    margin: 0;
+    border-left: none;
+  }
+  .hero-container .hero__landing-image-wrapper .hero__landing-main-tag h3 {
+    font-size: 11vw;
+    letter-spacing: -2px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero-container .hero__landing-image-wrapper .hero__landing-main-tag h3 {
+    font-size: 10vw;
+    letter-spacing: -2px;
+  }
+}
+.hero-container .hero__landing-image-wrapper .hero__landing-side-tag {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid rgba(255, 255, 255, 0.116);
+  right: 7.25rem;
+  bottom: 5.5rem;
+  padding: 1rem 2rem;
+  width: 35rem;
+  font-size: 1.5rem;
+}
+.hero-container .hero__landing-image-wrapper .hero__landing-side-tag * {
+  margin-bottom: 0.85rem;
+  font-family: "Exo 2", sans-serif;
+  font-weight: normal;
+}
+.hero-container .hero__landing-image-wrapper .hero__landing-side-tag h3 {
+  color: rgb(248, 248, 248);
+  font-style: italic;
+  letter-spacing: -2.5px;
+  font-size: 1.75rem;
+}
+.hero-container .hero__landing-image-wrapper .hero__landing-side-tag h4 {
+  letter-spacing: -1px;
+  font-size: 1.1rem;
+  color: rgb(224, 224, 224);
+}
+.hero-container .hero__landing-image-wrapper .hero__landing-side-tag .machina {
+  font-style: italic;
+  text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.041);
+}
+.hero-container .hero__landing-image-wrapper .hero__landing-side-tag .machina::after {
+  content: ".co";
+  color: #D72323;
+}
+.hero-container .hero__landing-image-wrapper .hero__landing-side-tag .hero__landing-side-tag-button {
+  padding: 1rem 1.25rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: rgb(175, 12, 12);
+  align-self: flex-start;
+  margin-top: 1rem;
+  font-size: 1em;
+  transition: all 0.15s;
+}
+.hero-container .hero__landing-image-wrapper .hero__landing-side-tag .hero__landing-side-tag-button a {
+  color: rgb(224, 224, 224);
+}
+.hero-container .hero__landing-image-wrapper .hero__landing-side-tag .hero__landing-side-tag-button:hover {
+  background-color: darkred;
+}
+@media screen and (max-width: 1450px) {
+  .hero-container .hero__landing-image-wrapper .hero__landing-side-tag {
+    position: relative;
+    right: 0;
+    bottom: 2rem;
+    left: 2.5rem;
+    border: none;
+  }
+}
+@media screen and (max-width: 1450px) {
+  .hero-container .hero__landing-image-wrapper .hero__landing-side-tag {
+    position: relative;
+    right: 0;
+    bottom: 2rem;
+    left: 2.5rem;
+    padding: 0;
+    border: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .hero-container .hero__landing-image-wrapper .hero__landing-side-tag {
+    bottom: 2rem;
+    left: 0;
+    width: fit-content;
+    padding: 1rem;
+  }
+}
+
+/* Main-Landing */
+.main__landing-services-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  z-index: 51;
+  padding: 3rem 0;
+  background-color: rgb(248, 248, 248);
+}
+.main__landing-services-wrapper header {
+  position: relative;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 1rem 5vw;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.11);
+}
+.main__landing-services-wrapper header h1 {
+  letter-spacing: -2px;
+  font-size: 1.75rem;
+  color: rgb(19, 18, 18);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif, sans-serif;
+}
+.main__landing-services-wrapper header h2 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: rgb(54, 53, 53);
+  letter-spacing: -1px;
+}
+.main__landing-services-wrapper .main__landing-services-container {
+  position: relative;
+  z-index: 50;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 95rem;
+  margin: 2rem;
+  perspective: 300px;
+}
+.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card {
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(248, 248, 248);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 50;
+  background-color: rgb(248, 248, 248);
+  padding: 0rem 0 1rem;
+  height: 40vh;
+  transition: all 0.2s;
+}
+.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card h2,
+.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card h3 {
+  text-shadow: 0px 0px 5px rgb(88, 81, 124), 0px 0px 1rem black;
+  font-weight: normal;
+}
+.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card h2 {
+  letter-spacing: -2px;
+}
+.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card h3 {
+  letter-spacing: -1px;
+}
+.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card:hover {
+  transform: rotateX(0.5deg);
+  box-shadow: 0px 0px 2rem rgb(216, 170, 170);
+}
+.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.one {
+  background-image: url("../images/arm.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
+  background-blend-mode: hard-light;
+  background-color: rgb(133, 134, 190);
+  background-position: top;
+}
+.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.two {
+  background-image: url("../images/ai.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
+  background-color: rgb(135, 148, 148);
+  background-blend-mode: hard-light;
+}
+.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.three {
+  background-image: url("../images/cloud.jpg"), linear-gradient(to top, rgb(0, 0, 0), 40%, transparent);
+  background-color: rgb(206, 65, 135);
+  background-blend-mode: hard-light;
+  background-position: center;
+}
+.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.four {
+  background-image: url("../images/data.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
+  background-blend-mode: hard-light;
+}
+@media screen and (max-width: 1024px) {
+  .main__landing-services-wrapper .main__landing-services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 630px) {
+  .main__landing-services-wrapper header {
+    text-align: center;
+  }
+  .main__landing-services-wrapper .main__landing-services-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.main__landing-services-wrapper .main__landing-services-btn {
+  padding: 1rem 1.25rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: rgb(248, 248, 248);
+  transition: all 0.15s;
+  border: 2px solid rgb(20, 20, 20);
+  margin: 2.5rem 0 1.5rem;
+  position: relative;
+  z-index: 50;
+}
+.main__landing-services-wrapper .main__landing-services-btn a {
+  color: rgb(20, 20, 20);
+  font-size: 1.25rem;
+}
+.main__landing-services-wrapper .main__landing-services-btn:hover {
+  background-color: darkred;
+  border: 2px solid darkred;
+}
+.main__landing-services-wrapper .main__landing-services-btn:hover a {
+  color: rgb(248, 248, 248);
+}
+.main__landing-services-wrapper .dots.main {
+  position: absolute;
+  z-index: 49;
+  padding: 12.5rem;
+  height: fit-content;
+  border-radius: 100%;
+  background-image: radial-gradient(circle, #d47e7e 1px, rgba(0, 0, 0, 0) 1px);
+}
+.main__landing-services-wrapper .dots.main.left {
+  left: 10rem;
+  top: 2rem;
+}
+.main__landing-services-wrapper .dots.main.right {
+  right: 10rem;
+  bottom: 2rem;
+}
+
+.landing__about-wrapper {
+  width: 100%;
+  height: 15vh;
+  background-color: rgb(233, 233, 233);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 50;
+}
+.landing__about-wrapper h1 {
+  letter-spacing: -2px;
+  font-size: 1.75rem;
+  color: rgb(19, 18, 18);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif, sans-serif;
+  position: relative;
+  z-index: 50;
+}
+.landing__about-wrapper h2 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: rgb(54, 53, 53);
+  letter-spacing: -1px;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 50;
+}
+.landing__about-wrapper h2 a {
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: all 0.15s;
+  color: rgb(54, 53, 53);
+}
+.landing__about-wrapper h2 a:hover {
+  color: rgb(20, 20, 20);
+  text-shadow: 0px 0px 1rem rgb(255, 217, 217);
+}
+.landing__about-wrapper h2 a::after {
+  font-size: 0.9rem;
+  margin-left: 0.35rem;
+  content: "➤";
+}
+.landing__about-wrapper .circle {
+  position: absolute;
+  z-index: -100;
+}
+.landing__about-wrapper .circle.main.one {
+  left: 20vw;
+}
+.landing__about-wrapper .circle.main.two {
+  left: 25vw;
+  bottom: -6vh;
+}
+.landing__about-wrapper .circle.main.three {
+  right: 15vw;
+  top: -6vh;
+}
+
+/* Main-Tech */
+body {
+  overflow-x: hidden;
+}
+
+.main__tech-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.main__tech-container header {
+  text-align: center;
+  padding-top: 3.6rem;
+  margin: 5rem 2rem 1rem;
+  max-width: 80rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+.main__tech-container header p {
+  line-height: 1.35;
+}
+@media screen and (max-width: 1024px) {
+  .main__tech-container header {
+    margin: 2rem 2rem 1rem;
+  }
+}
+.main__tech-container button {
+  padding: 1rem 1.25rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  transition: all 0.15s;
+  border: 2px solid rgb(20, 20, 20);
+  margin: 1rem 0 1.5rem;
+  margin: 1rem 0 3rem;
+}
+.main__tech-container button a {
+  font-size: 1.25rem;
+  color: rgb(20, 20, 20);
+}
+.main__tech-container button:hover {
+  background-color: darkred;
+  border: 2px solid darkred;
+}
+.main__tech-container button:hover a {
+  color: rgb(248, 248, 248);
+}
+.main__tech-container h1 {
+  letter-spacing: -2px;
+  font-size: 1.75rem;
+  color: rgb(19, 18, 18);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif, sans-serif;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.11);
+  padding: 0 15vw 1rem;
+}
+.main__tech-container #current {
+  border-left: 2px solid #D72323;
+}
+.main__tech-container .main__tech-feature-container {
+  background-image: radial-gradient(rgb(170, 42, 20), rgb(92, 13, 13));
+  margin: 2.5rem;
+  max-width: 65rem;
+  display: flex;
+  padding: 4rem;
+  border-radius: 0.25rem;
+  column-gap: 2rem;
+}
+.main__tech-container .main__tech-feature-container .main__tech-title-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(248, 248, 248);
+  transition: all 0.15s;
+}
+.main__tech-container .main__tech-feature-container .main__tech-title-container li {
+  padding-left: 0.5rem;
+  border-left: 2px solid transparent;
+}
+.main__tech-container .main__tech-feature-container .main__tech-title-container p {
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+.main__tech-container .main__tech-feature-container .main__tech-blurb-container {
+  flex: 2;
+  background-color: rgb(248, 248, 248);
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 4rem;
+  display: none;
+}
+.main__tech-container .main__tech-feature-container .main__tech-blurb-container h2 {
+  margin-bottom: 1rem;
+}
+.main__tech-container .main__tech-feature-container .main__tech-blurb-container p {
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+.main__tech-container .main__tech-feature-container .main__tech-blurb-container.artificial-intelligence.open,
+.main__tech-container .main__tech-feature-container .main__tech-blurb-container.open-source.open,
+.main__tech-container .main__tech-feature-container .main__tech-blurb-container.web-progrmaming.open,
+.main__tech-container .main__tech-feature-container .main__tech-blurb-container.front-end.open {
+  display: block;
+}
+@media screen and (max-width: 1024px) {
+  .main__tech-container .main__tech-feature-container {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .main__tech-container .main__tech-feature-container .main__tech-title-container {
+    align-self: flex-start;
+  }
+  .main__tech-container .main__tech-feature-container .main__tech-blurb-container {
+    padding: 2rem;
+  }
+}
+.main__tech-container .dots.tech {
+  position: absolute;
+  z-index: -1;
+  padding: 10rem;
+  height: fit-content;
+  border-radius: 100%;
+  background-image: radial-gradient(circle, #d47e7e 1px, rgba(0, 0, 0, 0) 1px);
+}
+.main__tech-container .dots.tech.one {
+  top: -5rem;
+  left: 5rem;
+}
+.main__tech-container .dots.tech.two {
+  bottom: -5rem;
+  right: 5rem;
+}
+.main__tech-container .circle.tech {
+  z-index: -1;
+  padding: 20vw;
+  position: absolute;
+}
+.main__tech-container .circle.tech.one {
+  left: 15rem;
+  bottom: 2rem;
+}
+.main__tech-container .circle.tech.two {
+  right: -5rem;
+  top: -5rem;
+}/*# sourceMappingURL=tech.css.map */

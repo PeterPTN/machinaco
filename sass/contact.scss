@@ -1,0 +1,228 @@
+/* SCSS Imports */
+@import "imports";
+
+main {
+    padding-top: 3.6rem;
+
+    .main__contact-container {
+        display: flex;
+        flex-direction: row;
+
+        .main__enquiry-container {
+            position: relative;
+            flex: 1.5;
+            max-width: 80rem;
+            margin: 5rem 2rem;
+
+            h1 {
+                @include h1;
+                margin-bottom: 2rem;
+            }
+
+            form {
+                display: grid;
+                grid-gap: 2rem;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-areas:
+                    "fullname fullname fullname email email email"
+                    "phonenumber phonenumber phonenumber country country country"
+                    "company company company . . ."
+                    "message message message message message message"
+                    "attachment attachment . . . .";
+            }
+
+            @media screen and (max-width: 550px) {
+                form {
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-areas:
+                    "fullname"
+                    'email'
+                    "phonenumber"
+                    'country'
+                    "company"
+                    "message"
+                    "attachment";
+                }
+            }
+
+            .form__input {
+                display: flex;
+                flex-direction: column;
+
+                * {
+                    margin-bottom: .25rem;
+                }
+
+                label {
+                    color: rgb(63, 63, 63);
+                }
+
+                input, textarea {
+                    border: none;
+                    border-bottom: 1px solid rgb(163, 163, 163);
+                    background-color: transparent;
+                }
+
+                input[type="file"] {
+                    display: none;
+                }
+
+                *:focus {
+                    outline: none;
+                    background-color: transparent;
+                    border-bottom: 1px solid black;
+                }
+                
+            }
+
+            .form__input.fullname {
+                grid-area: fullname;
+            }
+
+            .form__input.email {
+                grid-area: email;
+            }
+
+            .form__input.phonenumber {
+                grid-area: phonenumber;
+            }
+
+            .form__input.country {
+                grid-area: country;
+            }
+
+            .form__input.company {
+                grid-area: company;
+            }
+
+            .form__input.message {
+                grid-area: message;
+
+                textarea {
+                    resize: vertical;
+                }
+            }
+
+            .form__input.attachment {
+                grid-area: attachment;
+                transition: all .15s;
+                margin-top: 1rem;
+
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                    top: .2rem;
+                    position: relative;
+                }
+                
+                label {
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                }
+
+                label:hover {
+                    color: black;
+                }
+            }
+
+            .form__input.submit {
+                grid-area: submit;
+                position: absolute;
+                right: 0;
+                left: 0;
+                margin: auto;
+                bottom: -3rem;
+                width: fit-content;
+
+                padding: .5rem .75rem;
+                border: none;
+                border-radius: 5rem;
+                background-color: rgb(27, 27, 27);
+                color: $white;
+                transition: all .15s;
+                cursor: pointer;
+            }
+
+            .form__input.submit:hover {
+                background-color: grey;
+            }
+        }
+
+        .main__enquiry-image {
+            flex: 1;
+            background-image: url("../images/contact.jpg");
+            background-color: rgb(53, 52, 52);
+            background-blend-mode: hard-light;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .main__address-wrapper {
+        display: flex;
+        background-color: $off-white;
+
+        h2 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .main__address-container {
+            flex: 1.5;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            max-width: 80rem;
+            margin: 5rem 2rem;
+
+            .main__address-info,
+            .main__contact-info {
+                border: 2px solid $white;
+                border-radius: 3px;
+                padding: .55rem;
+
+                * {
+                    font-weight: normal;
+                }
+            }
+
+            .main__contact-info {
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: .5rem;
+
+                    p {
+                        color: rgb(55, 55, 55);
+                    }
+
+                    li>p:first-child {
+                        color: black;
+                        font-size: 1.1rem;
+                        letter-spacing: -1px;
+                    }
+                }
+            }
+        }
+
+        .main__satelite-img {
+            flex: 1;
+            display: flex;
+
+            iframe {
+                width: 100%;
+                border: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main__enquiry-image,
+    main > .main__address-wrapper > .main__satelite-img {
+        display: none;
+    }
+}

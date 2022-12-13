@@ -1,0 +1,444 @@
+/* SCSS Imports */
+@import "imports";
+
+/* Hero-Landing */
+
+.hero-container.landing {
+    height: 100vh;
+}
+
+@media screen and (max-width: 600px) {
+    .hero-container.landing {
+        height: 80vh;
+    }
+}
+
+.hero-container {
+
+    .hero__landing-image-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-image: url("../images/face.jpg");
+        background-color: rgba(114, 99, 84, 0.973);
+        background-blend-mode: luminosity;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        padding-top: 3.6rem;
+
+
+
+        .hero__landing-image-container {
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            position: relative;
+
+            background-image: linear-gradient($mid-black, 45%, rgba(0, 0, 0, 0.123));
+            height: 100%;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 1450px) {
+
+            .hero__landing-image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        * {
+            color: $white;
+            font-family: arial, sans-serif;
+        }
+
+        .hero__landing-main-tag {
+            flex: 1;
+            text-transform: uppercase;
+
+            margin: 1.5rem 15.5rem 2rem 7.25rem;
+            padding: 3rem 3rem;
+            border-left: 2px solid $grey;
+            border-top: 2px solid $grey;
+
+            h3 {
+                font-size: 8.5vw;
+                color: $white;
+                letter-spacing: -13px;
+                line-height: .85;
+                cursor: default;
+            }
+
+            h3:first-child {
+                color: red;
+            }
+
+            h3:nth-child(even) {
+                padding-left: 5rem;
+            }
+        }
+
+        @media screen and (max-width: 1450px) {
+            .hero__landing-main-tag {
+                padding: 2rem 2rem;
+                margin: 1.5rem 10.5rem 2rem 4.25rem;
+
+                h3 {
+                    font-size: 8rem;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+
+
+            .hero__landing-main-tag {
+                margin: 0;
+                border-left: none;
+
+                h3 {
+                    font-size: 11vw;
+                    letter-spacing: -2px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .hero__landing-main-tag {
+
+                h3 {
+                    font-size: 10vw;
+                    letter-spacing: -2px;
+                }
+            }
+        }
+
+        .hero__landing-side-tag {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+
+            border-right: 2px solid rgba(255, 255, 255, 0.116);
+            right: 7.25rem;
+            bottom: 5.5rem;
+            padding: 1rem 2rem;
+            width: 35rem;
+            font-size: 1.5rem;
+
+            * {
+                margin-bottom: .85rem;
+                font-family: $main-font;
+                font-weight: normal;
+            }
+
+            h3 {
+                color: $white;
+                font-style: italic;
+                letter-spacing: -2.5px;
+                font-size: 1.75rem;
+            }
+
+            h4 {
+                letter-spacing: -1px;
+                font-size: 1.1rem;
+
+                color: $off-white;
+            }
+
+
+            .machina {
+                font-style: italic;
+                text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.041);
+            }
+
+            .machina::after {
+                content: ".co";
+                color: $red;
+            }
+
+            .hero__landing-side-tag-button {
+                @include button;
+                @include cta-btn;
+                align-self: flex-start;
+                margin-top: 1rem;
+                font-size: 1em;
+                transition: all .15s;
+
+                a {
+                    color: $off-white;
+                }
+            }
+
+            .hero__landing-side-tag-button:hover {
+                background-color: darkred;
+            }
+        }
+
+        @media screen and (max-width: 1450px) {
+            .hero__landing-side-tag {
+                position: relative;
+                right: 0;
+                bottom: 2rem;
+                left: 2.5rem;
+                border: none;
+            }
+        }
+
+        @media screen and (max-width: 1450px) {
+            .hero__landing-side-tag {
+                position: relative;
+                right: 0;
+                bottom: 2rem;
+                left: 2.5rem;
+                padding: 0;
+                border: none;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            .hero__landing-side-tag {
+                bottom: 2rem;
+                left: 0;
+                width: fit-content;
+                padding: 1rem;
+            }
+        }
+
+    }
+}
+
+/* Main-Landing */
+.main__landing-services-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 51;
+    padding: 3rem 0;
+    background-color: $white;
+
+    header {
+        position: relative;
+        z-index: 50;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0;
+        padding: 1rem 5vw;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.11);
+
+        h1 {
+            @include h1;
+        }
+
+        h2 {
+            @include h2;
+        }
+    }
+
+    .main__landing-services-container {
+        position: relative;
+        z-index: 50;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        max-width: 95rem;
+        margin: 2rem;
+        perspective: 300px;
+
+        .main__landing-services-card {
+            border-top-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: $white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 50;
+            background-color: $white;
+
+            padding: 0rem 0 1rem;
+            height: 40vh;
+            transition: all .2s;
+
+            h2,
+            h3 {
+                text-shadow: 0px 0px 5px rgb(88, 81, 124), 0px 0px 1rem black;
+                font-weight: normal;
+            }
+
+            h2 {
+                letter-spacing: -2px;
+             
+            }
+
+            h3 {
+                letter-spacing: -1px;
+              
+            }
+        }
+
+        .main__landing-services-card:hover {
+            transform: rotateX(.5deg);
+            box-shadow: 0px 0px 2rem rgb(216, 170, 170);
+        }
+
+        .main__landing-services-card.one {
+            background-image: url("../images/arm.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
+            background-blend-mode: hard-light;
+            background-color: rgb(133, 134, 190);
+            background-position: top;
+        }
+
+        .main__landing-services-card.two {
+            background-image: url("../images/ai.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
+            background-color: rgb(135, 148, 148);
+            background-blend-mode: hard-light;
+        }
+
+        .main__landing-services-card.three {
+            background-image: url("../images/cloud.jpg"), linear-gradient(to top, rgb(0, 0, 0), 40%, transparent);
+            background-color: rgb(206, 65, 135);
+            background-blend-mode: hard-light;
+            background-position: center;
+        }
+
+        .main__landing-services-card.four {
+            background-image: url("../images/data.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
+            background-blend-mode: hard-light;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .main__landing-services-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 630px) {
+        header {
+            text-align: center;
+        }
+
+        .main__landing-services-container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    .main__landing-services-btn {
+        @include button;
+        background-color: $white;
+        transition: all .15s;
+        border: 2px solid $mid-black;
+        margin: 2.5rem 0 1.5rem;
+        position: relative;
+        z-index: 50;
+
+        a {
+            color: $mid-black;
+            font-size: 1.25rem;
+        }
+    }
+
+    .main__landing-services-btn:hover {
+        background-color: darkred;
+        border: 2px solid darkred;
+
+
+        a {
+            color: $white;
+        }
+    }
+
+    .dots.main {
+        position: absolute;
+        z-index: 49;
+        padding: 12.5rem;
+        height: fit-content;
+        border-radius: 100%;
+        background-image: radial-gradient(circle, #d47e7e 1px, rgba(0, 0, 0, 0) 1px);
+    }
+
+    .dots.main.left {
+        left: 10rem;
+        top: 2rem;
+    }
+
+    .dots.main.right {
+        right: 10rem;
+        bottom: 2rem;
+    }
+}
+
+.landing__about-wrapper {
+    width: 100%;
+    height: 15vh;
+    background-color: rgb(233, 233, 233);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 50;
+
+    h1 {
+        @include h1;
+        position: relative;
+        z-index: 50;
+    }
+
+    h2 {
+        @include h2;
+        margin: .5rem;
+        font-size: 1.2rem;
+        position: relative;
+        z-index: 50;
+
+        a {
+            cursor: pointer;
+            padding: .25rem;
+            transition: all .15s;
+            color: rgb(54, 53, 53);
+        }
+
+        a:hover {
+            color: $mid-black;
+            text-shadow: 0px 0px 1rem rgb(255, 217, 217);
+        }
+
+        a::after {
+            font-size: .9rem;
+            margin-left: .35rem;
+            content: "➤";
+        }
+    }
+
+    .circle {
+        position: absolute;
+        z-index: -100;
+    }
+
+    .circle.main.one {
+        left: 20vw;
+    }
+
+    .circle.main.two {
+        left: 25vw;
+        bottom: -6vh;
+    }
+
+    .circle.main.three {
+        right: 15vw;
+        top: -6vh;
+    }
+}

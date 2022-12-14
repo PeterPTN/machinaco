@@ -246,25 +246,26 @@
   transform: rotateX(0.5deg);
   box-shadow: 0px 0px 2rem rgb(216, 170, 170);
 }
-.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.one {
-  background-image: url("../images/arm.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
+.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.web {
+  background-image: url("../images/web.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
   background-blend-mode: hard-light;
   background-color: rgb(133, 134, 190);
-  background-position: top;
+  background-position: center;
 }
-.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.two {
-  background-image: url("../images/ai.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
+.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.soft {
+  background-image: url("../images/data.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
   background-color: rgb(135, 148, 148);
   background-blend-mode: hard-light;
+  background-position: -70px;
 }
-.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.three {
-  background-image: url("../images/cloud.jpg"), linear-gradient(to top, rgb(0, 0, 0), 40%, transparent);
+.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.ai {
+  background-image: url("../images/arm.jpg"), linear-gradient(to top, rgb(0, 0, 0), 40%, transparent);
   background-color: rgb(206, 65, 135);
   background-blend-mode: hard-light;
   background-position: center;
 }
-.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.four {
-  background-image: url("../images/data.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
+.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.rpa {
+  background-image: url("../images/ai.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
   background-blend-mode: hard-light;
 }
 @media screen and (max-width: 1024px) {
@@ -288,7 +289,7 @@
   background-color: rgb(248, 248, 248);
   transition: all 0.15s;
   border: 2px solid rgb(20, 20, 20);
-  margin: 2.5rem 0 1.5rem;
+  margin: 4rem 0 1.5rem;
   position: relative;
   z-index: 50;
 }

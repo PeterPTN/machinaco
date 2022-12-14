@@ -43,7 +43,8 @@ main .main__contact-container .main__enquiry-container .form__input * {
 main .main__contact-container .main__enquiry-container .form__input label {
   color: rgb(63, 63, 63);
 }
-main .main__contact-container .main__enquiry-container .form__input input, main .main__contact-container .main__enquiry-container .form__input textarea {
+main .main__contact-container .main__enquiry-container .form__input input,
+main .main__contact-container .main__enquiry-container .form__input textarea {
   border: none;
   border-bottom: 1px solid rgb(163, 163, 163);
   background-color: transparent;
@@ -170,6 +171,69 @@ main .main__address-wrapper .main__satelite-img {
 main .main__address-wrapper .main__satelite-img iframe {
   width: 100%;
   border: none;
+}
+main .main__staff-wrapper {
+  background-color: rgb(133, 195, 245);
+  padding: 3rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .main__staff-wrapper h1 {
+  letter-spacing: -2px;
+  font-size: 1.75rem;
+  color: rgb(19, 18, 18);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif, sans-serif;
+  padding: 1rem 5rem;
+}
+main .main__staff-wrapper .main__staff-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 60%;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+main .main__staff-wrapper .main__staff-container .main__staff-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.25;
+}
+main .main__staff-wrapper .main__staff-container .main__staff-card h2,
+main .main__staff-wrapper .main__staff-container .main__staff-card p {
+  text-align: center;
+}
+main .main__staff-wrapper .main__staff-container .main__staff-card h2 {
+  letter-spacing: -2px;
+  font-size: 1.75rem;
+  color: rgb(19, 18, 18);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif, sans-serif;
+  font-size: 1.5rem;
+}
+main .main__staff-wrapper .main__staff-container .main__staff-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 100rem;
+  background-size: 500px;
+}
+@media screen and (max-width: 1500px) {
+  main .main__staff-wrapper .main__staff-container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  main .main__staff-wrapper .main__staff-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 550px) {
+  main .main__staff-wrapper {
+    text-align: center;
+  }
+  main .main__staff-wrapper .main__staff-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media screen and (max-width: 1024px) {

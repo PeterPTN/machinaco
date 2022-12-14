@@ -19,7 +19,7 @@ main {
         @include h2;
         margin: .5rem 0;
         letter-spacing: -1px;
-        color: grey;
+      
     }
 
     button {
@@ -47,7 +47,7 @@ main {
         grid-template-columns: repeat(3, 1fr);
         gap: 3rem;
         perspective: 400px;
-        margin: 3rem;
+        margin: 3rem 0 4.5rem;
         max-width: 95rem;
 
         .main__project-card {
@@ -92,6 +92,7 @@ main {
 
             p {
                 padding: .5rem 1rem;
+                text-align: center;
             }
 
             p::first-letter {

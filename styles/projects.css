@@ -24,7 +24,6 @@ main h2 {
   letter-spacing: -1px;
   margin: 0.5rem 0;
   letter-spacing: -1px;
-  color: grey;
 }
 main button {
   padding: 1rem 1.25rem;
@@ -53,7 +52,7 @@ main .main__projects-container {
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
   perspective: 400px;
-  margin: 3rem;
+  margin: 3rem 0 4.5rem;
   max-width: 95rem;
 }
 main .main__projects-container .main__project-card {
@@ -95,6 +94,7 @@ main .main__projects-container .main__project-card img {
 }
 main .main__projects-container .main__project-card p {
   padding: 0.5rem 1rem;
+  text-align: center;
 }
 main .main__projects-container .main__project-card p::first-letter {
   font-size: 1.25rem;

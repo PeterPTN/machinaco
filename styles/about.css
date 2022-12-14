@@ -249,25 +249,26 @@
   transform: rotateX(0.5deg);
   box-shadow: 0px 0px 2rem rgb(216, 170, 170);
 }
-.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.one {
-  background-image: url("../images/arm.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
+.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.web {
+  background-image: url("../images/web.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
   background-blend-mode: hard-light;
   background-color: rgb(133, 134, 190);
-  background-position: top;
+  background-position: center;
 }
-.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.two {
-  background-image: url("../images/ai.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
+.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.soft {
+  background-image: url("../images/data.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
   background-color: rgb(135, 148, 148);
   background-blend-mode: hard-light;
+  background-position: -70px;
 }
-.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.three {
-  background-image: url("../images/cloud.jpg"), linear-gradient(to top, rgb(0, 0, 0), 40%, transparent);
+.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.ai {
+  background-image: url("../images/arm.jpg"), linear-gradient(to top, rgb(0, 0, 0), 40%, transparent);
   background-color: rgb(206, 65, 135);
   background-blend-mode: hard-light;
   background-position: center;
 }
-.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.four {
-  background-image: url("../images/data.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
+.main__landing-services-wrapper .main__landing-services-container .main__landing-services-card.rpa {
+  background-image: url("../images/ai.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
   background-blend-mode: hard-light;
 }
 @media screen and (max-width: 1024px) {
@@ -291,7 +292,7 @@
   background-color: rgb(248, 248, 248);
   transition: all 0.15s;
   border: 2px solid rgb(20, 20, 20);
-  margin: 2.5rem 0 1.5rem;
+  margin: 4rem 0 1.5rem;
   position: relative;
   z-index: 50;
 }
@@ -490,7 +491,6 @@
   align-items: center;
   padding: 2rem 0;
   margin: 3rem 0;
-  row-gap: 3rem;
 }
 .main__about-container h1 {
   letter-spacing: -2px;
@@ -503,19 +503,29 @@
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   border-bottom: 1px solid rgba(128, 128, 128, 0.11);
 }
+.main__about-container h2 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: rgb(54, 53, 53);
+  letter-spacing: -1px;
+  padding: 1rem 0;
+  margin-bottom: 3rem;
+}
 .main__about-container .main__about-blurb-container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   column-gap: 5rem;
-  margin: 0rem 12rem;
+  margin: 0rem 6rem 3rem;
+  flex-wrap: wrap;
 }
 .main__about-container .main__about-blurb-container .main__about-blurb-card {
   border-left: 2px solid #D72323;
-  padding: 1rem;
+  padding: 1rem 0 1rem 2rem;
+  flex: 1;
 }
 .main__about-container .main__about-blurb-container h2 {
   font-weight: normal;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
   margin-bottom: 1rem;
 }
 .main__about-container .main__about-blurb-container p {
@@ -523,9 +533,11 @@
   text-indent: 1rem;
   color: grey;
 }
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1750px) {
   .main__about-container .main__about-blurb-container {
     margin: 2rem 4rem;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -535,9 +547,7 @@
     margin: 1rem;
   }
   .main__about-container .main__about-blurb-container {
-    flex-direction: column;
-    row-gap: 3rem;
-    margin: 2rem;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .main__about-container button {

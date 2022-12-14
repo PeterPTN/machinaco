@@ -4,20 +4,24 @@ function getNewArticle() {
     const list = document.getElementsByClassName("main__tech-title-list")[0];
     const listArray = [].slice.call(list.children);
 
-    const ai = document.getElementsByClassName("main__tech-blurb-container")[0];
-    const os = document.getElementsByClassName("main__tech-blurb-container")[1];
-    const wp = document.getElementsByClassName("main__tech-blurb-container")[2];
-    const fe = document.getElementsByClassName("main__tech-blurb-container")[3];
+    const frontEnd = document.getElementsByClassName("main__tech-blurb-container")[0];
+    const backEnd = document.getElementsByClassName("main__tech-blurb-container")[1];
+    const dataBase = document.getElementsByClassName("main__tech-blurb-container")[2];
+    const bigData = document.getElementsByClassName("main__tech-blurb-container")[3];
+    const deskTop = document.getElementsByClassName("main__tech-blurb-container")[4];
+    const cloud = document.getElementsByClassName("main__tech-blurb-container")[5];
 
-    const allArray = [ai, os, wp, fe];
+    const allArray = [frontEnd, backEnd, dataBase, bigData, deskTop, cloud];
 
     list.addEventListener("click", (event) => {
         let clickPath = event.composedPath()[0].textContent || event.path[0].textContent;
 
-        if (clickPath == "Artificial Intelligence and Machine Learning" ||
-            clickPath == "Open Source Frameworks" ||
-            clickPath == "Web Programming" ||
-            clickPath == "Front-end Technologies") {
+        if (clickPath == "Front-end Programming Languages" ||
+            clickPath == "Back-end Programming Langauges" ||
+            clickPath == "Databases" ||
+            clickPath == "Big Data" ||
+            clickPath == "Desktop" ||
+            clickPath == "Clouds") {
 
             // Class
             let currentPath = event.composedPath()[1] || event.path[1];
@@ -41,17 +45,23 @@ function getNewArticle() {
 
             // Add open classList 
             switch (clickPath) {
-                case "Artificial Intelligence and Machine Learning":
-                    ai.classList.add("open");
+                case "Front-end Programming Languages":
+                    frontEnd.classList.add("open");
                     break;
-                case "Open Source Frameworks":
-                    os.classList.add("open");
+                case "Back-end Programming Langauges":
+                    backEnd.classList.add("open");
                     break;
-                case "Web Programming":
-                    wp.classList.add("open");
+                case "Databases":
+                    dataBase.classList.add("open");
                     break;
-                case "Front-end Technologies":
-                    fe.classList.add("open");
+                case "Big Data":
+                    bigData.classList.add("open");
+                    break;
+                case "Desktop":
+                    deskTop.classList.add("open");
+                    break;
+                case "Clouds":
+                    cloud.classList.add("open");
                     break;
                 default:
                     console.log("Broke");

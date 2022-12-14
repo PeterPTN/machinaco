@@ -128,7 +128,6 @@
     align-items: center;
     padding: 2rem 0;
     margin: 3rem 0;
-    row-gap: 3rem;;
 
     h1 {
         @include h1;
@@ -139,20 +138,31 @@
         @include borderbottom;
     }
 
+    h2 {
+        @include h2;
+        padding: 1rem 0;
+        margin-bottom: 3rem;
+   
+    }
+
+
+
     .main__about-blurb-container {
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         column-gap: 5rem;
-        margin: 0rem 12rem;
+        margin: 0rem 6rem 3rem;
+        flex-wrap: wrap;
 
         .main__about-blurb-card {
             border-left: 2px solid $red;
-            padding: 1rem;
+            padding: 1rem 0 1rem 2rem;
+            flex: 1;
         }
 
         h2 {
             font-weight: normal;
-            letter-spacing: -2px;
+            letter-spacing: -1px;
             margin-bottom: 1rem;
         }
 
@@ -163,9 +173,11 @@
         }
     }
 
-    @media screen and (max-width: 1350px) {
+    @media screen and (max-width: 1750px) {
         .main__about-blurb-container {
             margin: 2rem 4rem;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 2rem;
         }
     }
 
@@ -178,9 +190,7 @@
         }
 
         .main__about-blurb-container {
-            flex-direction: column;
-            row-gap: 3rem;
-            margin: 2rem;
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 

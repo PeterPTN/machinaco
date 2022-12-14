@@ -12,6 +12,7 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
+    perspective: 1000px;
 
     h1 {
         margin-bottom: 1rem;
@@ -24,7 +25,6 @@ body {
         max-width: 80rem;
         display: flex;
         flex-direction: column;
-        row-gap: 1rem;
 
 
         p {
@@ -41,7 +41,7 @@ body {
     button {
         @include button;
         @include neutral-btn;
-        margin: 1rem 0 3rem;
+        margin: 1rem 0 4rem;
 
         a {
             font-size: 1.25rem;
@@ -52,7 +52,7 @@ body {
     button:hover {
         background-color: darkred;
         border: 2px solid darkred;
-        
+
         a {
             color: $white;
         }
@@ -64,6 +64,12 @@ body {
         padding: 0 15vw 1rem;
     }
 
+    h2 {
+        @include h2;
+        margin-bottom: 3rem;
+
+    }
+
     #current {
         border-left: 2px solid $red;
     }
@@ -71,11 +77,14 @@ body {
     .main__tech-feature-container {
         background-image: radial-gradient(rgb(170, 42, 20), rgb(92, 13, 13));
         margin: 2.5rem;
-        max-width: 65rem;
+        max-width: 75rem;
         display: flex;
         padding: 4rem;
         border-radius: .25rem;
         column-gap: 2rem;
+        border-top-left-radius: 3rem;
+        border-bottom-right-radius: 3rem;
+        box-shadow: 0px 0px .5rem grey;
 
         .main__tech-title-container {
             flex: 1;
@@ -100,25 +109,43 @@ body {
         .main__tech-blurb-container {
             flex: 2;
             background-color: $white;
-            border-top-left-radius: 2rem;
-            border-bottom-right-radius: 2rem;
-            padding: 4rem;
+            padding: 1.5rem 3rem;
             display: none;
+            width: 40rem;
+            height: 20rem;
+            overflow-y: scroll;
+            border-radius: 5px;
 
             h2 {
                 margin-bottom: 1rem;
+                font-weight: 600;
             }
 
             p {
                 margin-bottom: .5rem;
                 line-height: 1.35;
             }
+
+            ul {
+                list-style: circle;
+
+            }
+
+            li {
+
+                line-height: 2;
+                list-style: disc;
+                margin-left: 1.25rem;
+
+            }
         }
 
-        .main__tech-blurb-container.artificial-intelligence.open,
-        .main__tech-blurb-container.open-source.open,
-        .main__tech-blurb-container.web-progrmaming.open,
-        .main__tech-blurb-container.front-end.open {
+        .main__tech-blurb-container.front-end.open,
+        .main__tech-blurb-container.back-end.open,
+        .main__tech-blurb-container.databases.open,
+        .main__tech-blurb-container.big-data.open,
+        .main__tech-blurb-container.desktop.open,
+        .main__tech-blurb-container.cloud.open {
             display: block;
         }
     }
@@ -133,7 +160,10 @@ body {
             }
 
             .main__tech-blurb-container {
-                padding: 2rem;
+                width: auto;
+                height: auto;
+                max-width: 40rem;
+                max-height: auto;
             }
         }
     }

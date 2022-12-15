@@ -22,7 +22,14 @@ All images from unsplash/pexels (copyright free).
 - The projects page includes a 3 column layout of 6 different projects (desktop view). Each project has a brief description of what it is and what language was primarily used to create it.
 - The contacts page includes a simple form, email and phone details along with personnel information
 
+### Additional Information
+The overall styling of the website is a mish-mash of different software development company websites I saw. 
+I used a simple color palette of different shades of black and white while incorporating (mainly) reds and blues to signifiers and to add overall contrast.
+I kept consistency across all pages by maintaining similar spacing across all pages and re-using assets in the form of mixins (most notable on button and borders).
 
 Check it out here:
 https://peterptn.github.io/machinaco/index.html
+
+Repository here:
+https://github.com/PeterPTN/machinaco
 

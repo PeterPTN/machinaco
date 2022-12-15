@@ -1,7 +1,10 @@
 @charset "UTF-8";
-/* SCSS Imports */ /* Fonts */
+/* Fonts */
 /* Colors */
 /* Mixins */
+/* Single line truncate */
+/* Multi line truncate */
+/* SCSS Imports */
 /* Global CSS styles */
 :root {
   font-size: 1rem;
@@ -19,37 +22,22 @@
   font-family: "Exo 2", sans-serif;
 }
 
-.text-center {
-  text-align: center !important;
-}
-
-.hidden {
-  display: none !important;
-}
-
-/* Single line truncate */
-.truncate {
-  width: 250px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* Multi line truncate */
-.multi-truncate {
-  line-height: 2rem;
-  max-height: 4rem;
-  -webkit-box-orient: vertical;
-  display: block;
-  display: -webkit-box;
-  overflow: hidden !important;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
-}
-
 img {
   max-width: 100%;
   max-height: 100%;
+}
+
+.dots {
+  background-size: 20px 20px;
+  background-image: radial-gradient(circle, #000000 2px, rgba(0, 0, 0, 0) 1px);
+}
+
+.circle {
+  height: 135px;
+  width: 135px;
+  background-color: rgb(223, 223, 223);
+  border-radius: 50%;
+  display: inline-block;
 }
 
 /* ---- Styles ---- */
@@ -72,19 +60,6 @@ body {
 
 #this {
   text-decoration: underline;
-}
-
-.dots {
-  background-size: 20px 20px;
-  background-image: radial-gradient(circle, #000000 2px, rgba(0, 0, 0, 0) 1px);
-}
-
-.circle {
-  height: 135px;
-  width: 135px;
-  background-color: rgb(223, 223, 223);
-  border-radius: 50%;
-  display: inline-block;
 }
 
 .hero__topbar {
@@ -279,12 +254,10 @@ body {
   filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(293deg) brightness(109%) contrast(101%);
 }
 
-/* SCSS Imports */ /* Fonts */
-/* Colors */
-/* Mixins */
+/* SCSS Imports */
 .hero__landing-image-wrapper {
   display: flex;
-  background-image: url("../images/face.jpg");
+  background-image: url("../images/services/face.jpg");
   background-color: rgba(114, 99, 84, 0.973);
   background-blend-mode: luminosity;
   background-size: cover;
@@ -548,25 +521,25 @@ body {
   box-shadow: 0px 0px 2rem rgb(216, 170, 170);
 }
 .main__landing-services-card.web {
-  background-image: url("../images/web.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
+  background-image: url("../images/services/web.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
   background-blend-mode: hard-light;
   background-color: rgb(133, 134, 190);
   background-position: center;
 }
 .main__landing-services-card.soft {
-  background-image: url("../images/data.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
+  background-image: url("../images/services/data.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
   background-color: rgb(135, 148, 148);
   background-blend-mode: hard-light;
   background-position: -70px;
 }
 .main__landing-services-card.ai {
-  background-image: url("../images/arm.jpg"), linear-gradient(to top, rgb(0, 0, 0), 40%, transparent);
+  background-image: url("../images/services/arm.jpg"), linear-gradient(to top, rgb(0, 0, 0), 40%, transparent);
   background-color: rgb(206, 65, 135);
   background-blend-mode: hard-light;
   background-position: center;
 }
 .main__landing-services-card.rpa {
-  background-image: url("../images/ai.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
+  background-image: url("../images/services/ai.jpg"), linear-gradient(to top, rgb(22, 21, 21), 40%, transparent);
   background-blend-mode: hard-light;
 }
 .main__landing-services-btn {
@@ -669,13 +642,10 @@ body {
   top: -6vh;
 }
 
-/* Fonts */
-/* Colors */
-/* Mixins */
 .hero__about-section-container {
   padding-top: 3.6rem;
   background-color: rgb(248, 248, 248);
-  background-image: url("../images/meeting.jpg"), linear-gradient(to top, rgba(27, 27, 26, 0.788), 80%, rgb(100, 50, 21));
+  background-image: url("../images/services/meeting.jpg"), linear-gradient(to top, rgba(27, 27, 26, 0.788), 80%, rgb(100, 50, 21));
   background-blend-mode: multiply;
   background-position: center;
   background-repeat: no-repeat;
@@ -863,9 +833,6 @@ body {
   width: 100%;
 }
 
-/* Fonts */
-/* Colors */
-/* Mixins */
 .main.--tech {
   display: flex;
   flex-direction: column;
@@ -1055,9 +1022,6 @@ body {
   top: -5rem;
 }
 
-/* Fonts */
-/* Colors */
-/* Mixins */
 .main.--projects {
   padding: 3.6rem 4rem 0;
   display: flex;
@@ -1182,9 +1146,6 @@ body {
   left: 2.2px;
 }
 
-/* Fonts */
-/* Colors */
-/* Mixins */
 .main.--contact {
   padding-top: 3.6rem;
 }

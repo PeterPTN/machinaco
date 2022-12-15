@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/contact.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styles.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,9 +15,9 @@
 </head>
 
 <body>
-    <section class="hero-container">
-        <header class="hero__navbar-container">
-            <div class="hero__title-container">
+    <section class="hero">
+        <header class="hero__topbar">
+            <div class="hero__title">
                 <h1><a href="../index.html">Machina</a></h1>
                 <h2><a href="../index.html">Unlimited Possibilities</a></h2>
             </div>
@@ -39,11 +38,11 @@
         </header>
     </section>
 
-    <main>
+    <main class="main --contact">
         <section class="main__contact-container">
             <div class="main__enquiry-container">
                 <h1>Contact Us</h1>
-                <form>
+                <form class="form">
                     <div class="form__input fullname">
                         <label for="fullname">Full name *</label>
                         <input type="text" id="fullname" name="fullname" required maxlength="100">
@@ -124,7 +123,11 @@
         </section>
 
         <section class="main__staff-wrapper">
+            <div class="dots staff --one"></div>
+            <div class="circle staff --one"></div>
+
             <h1>Meet Our Leaders</h1>
+            <h2>Proudly representing Machina.co</h2>
             <div class="main__staff-container">
                 <div class="main__staff-card">
                     <img src="../images/staff/m3c.jpg" />
@@ -165,7 +168,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="footer__links-container">
             <ul>
                 <li>

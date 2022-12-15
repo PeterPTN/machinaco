@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/tech.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styles.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,9 +16,9 @@
 </head>
 
 <body>
-    <section class="hero-container">
-        <header class="hero__navbar-container">
-            <div class="hero__title-container">
+    <section class="hero">
+        <header class="hero__topbar">
+            <div class="hero__title">
                 <h1><a href="../index.html">Machina</a></h1>
                 <h2><a href="../index.html">Unlimited Possibilities</a></h2>
             </div>
@@ -41,20 +40,21 @@
     </section>
 
     <main>
-        <section class="main__tech-container">
-            <div class="dots tech one"></div>
-            <div class="dots tech two"></div>
+        <section class="main --tech">
+            <div class="dots tech --one"></div>
+            <div class="dots tech --two"></div>
 
-            <div class="circle tech one"></div>
-            <div class="circle tech two"></div>
+            <div class="circle tech --one"></div>
+            <div class="circle tech --two"></div>
 
-            <header>
+            <header class="main__tech-header">
                 <h1>Our Technology Expertise</h1>
                 <h2>We help choose a stack that suits your project</h2>
                 <p class="main__tech-header-blurb">
                     Our services spread across a wide domain, and similarly our choice of different programming
                     languages/frameworks are varied to best meet your requirements. Our specialists are well versed
-                    across the lists of languages you'll find below, ensuring user-friendly, scalable and secure solutions.
+                    across the lists of languages you'll find below, ensuring user-friendly, scalable and secure
+                    solutions.
                 </p>
             </header>
 
@@ -164,11 +164,11 @@
                 </div>
             </article>
 
-            <button><a href="./contact.html">Let's Talk</a></button>
+            <button class="main__tech-button"><a href="./contact.html">Let's Talk</a></button>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="footer__links-container">
             <ul>
                 <li>

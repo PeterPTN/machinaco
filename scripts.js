@@ -8,7 +8,7 @@ function setOnLoad() {
 
 const burger = document.getElementsByClassName("hero__hamburger")[0];
 const navMenu = document.getElementsByClassName("hero__nav-container")[0];
-const navbar = document.getElementsByClassName("hero__navbar-container")[0];
+const navbar = document.getElementsByClassName("hero__topbar")[0];
 
 function getScrollValues() {
     window.addEventListener("scroll", (event) => {

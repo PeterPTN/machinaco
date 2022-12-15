@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/about.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styles.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,9 +15,9 @@
 </head>
 
 <body>
-    <section class="hero-container">
-        <header class="hero__navbar-container">
-            <div class="hero__title-container">
+    <section class="hero">
+        <header class="hero__topbar">
+            <div class="hero__title">
                 <h1><a href="../index.html">Machina</a></h1>
                 <h2><a href="../index.html">Unlimited Possibilities</a></h2>
             </div>
@@ -69,9 +68,11 @@
     </section>
 
     <main>
-        <section class="main__about-container">
-            <h1>What We Can Offer You</h1>
-            <h2>End-to-End Custom Software Solutions To Suit Your Needs</h2>
+        <section class="main --about">
+            <header class="main__about-header">
+                <h1>What We Can Offer You</h1>
+                <h2>End-to-End Custom Software Solutions To Suit Your Needs</h2>
+            </header>
 
             <div class="main__about-blurb-container">
                 <div class="main__about-blurb-card one">
@@ -99,8 +100,6 @@
                         workflows, technologies and processes. We provide custom solutions that implement artificial
                         intelligence across a range of ways, including but not limited to predictive analysis, machine
                         learning, conversatinal A.I. and many, many more.</p>
-                    <p>Get in touch with our team to find out more</p>
-                    <p></p>
                 </div>
 
                 <div class="main__about-blurb-card four">
@@ -111,11 +110,11 @@
                 </div>
             </div>
 
-            <button><a href="./contact.html">Let's Work Together</a></button>
+            <button class="main__about-button"><a href="./contact.html">Let's Work Together</a></button>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="footer__links-container">
             <ul>
                 <li>

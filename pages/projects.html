@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
-    <link href="../styles/projects.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/styles.css" rel="stylesheet" type="text/css" />
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,9 +15,9 @@
 </head>
 
 <body>
-    <section class="hero-container">
-        <header class="hero__navbar-container">
-            <div class="hero__title-container">
+    <section class="hero">
+        <header class="hero__topbar">
+            <div class="hero__title">
                 <h1><a href="../index.html">Machina</a></h1>
                 <h2><a href="../index.html">Unlimited Possibilities</a></h2>
             </div>
@@ -39,9 +38,11 @@
         </header>
     </section>
 
-    <main>
-        <h1>Projects - Client Case Studies</h1>
-        <h2>See how we've helped our clients achieve their digital vision</h2>
+    <main class="main --projects">
+        <header class="main__projects-header">
+            <h1>Projects - Client Case Studies</h1>
+            <h2>See how we've helped our clients achieve their digital vision</h2>
+        </header>
 
         <section class="main__projects-container">
             <article class="main__project-card one">
@@ -53,7 +54,8 @@
             <article class="main__project-card two">
                 <img src="../images/projects/astrokid.jpg" />
                 <h2><span></span>Astroboy</h2>
-                <p>An ambitious project by Tezuka Inc. to recreate Astroboy. Has the ability to walk in a variety of conditions and react disturbances - written in C++</p>
+                <p>An ambitious project by Tezuka Inc. to recreate Astroboy. Has the ability to walk in a variety of
+                    conditions and react disturbances - written in C++</p>
             </article>
 
             <article class="main__project-card three">
@@ -65,7 +67,8 @@
             <article class="main__project-card four">
                 <img src="../images/projects/robot.jpg" />
                 <h2><span></span>Hancock Model 100</h2>
-                <p>A surveillance drone used by Greenwater written in C++. Used to detect humans in all conditions. Data analysis system written in Python.</p>
+                <p>A surveillance drone used by Greenwater written in C++. Used to detect humans in all conditions. Data
+                    analysis system written in Python.</p>
             </article>
 
             <article class="main__project-card five">
@@ -81,10 +84,10 @@
             </article>
         </section>
 
-        <button><a href="./contact.html">Let's Discuss Your Project</a></button>
+        <button class="main__project-button"><a href="./contact.html">Let's Discuss Your Project</a></button>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="footer__links-container">
             <ul>
                 <li>

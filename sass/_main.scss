@@ -1,0 +1,289 @@
+/* SCSS Imports */
+// * <-- omits namespace.$variable
+@use "imports" as *;
+
+// Block Element Holds No Styles
+// Use Modifier If Styles Needed
+
+/* Global CSS styles */
+:root {
+    font-size: 1rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+    font-family: $main-font;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.dots {
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle, #000000 2px, rgba(0, 0, 0, 0) 1px);
+}
+
+.circle {
+    height: 135px;
+    width: 135px;
+    background-color: rgb(223, 223, 223);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* ---- Styles ---- */
+
+*::-webkit-scrollbar {
+    width: .9rem;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $off-white;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: $mid-black;
+}
+
+body {
+    background-color: $white;
+    overflow-x: hidden;
+}
+
+#this {
+    text-decoration: underline;
+}
+
+.hero {
+    &__topbar {
+        position: fixed;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 1rem;
+        background-color: $mid-black;
+        z-index: 100;
+        transition: all .35s;
+        padding: .55em 1em;
+    }
+
+    &__title {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            margin-bottom: .5em;
+            font-weight: 100;
+            letter-spacing: .1em;
+            font-style: italic;
+            padding-left: .5rem;
+        }
+
+        a {
+            color: $white;
+        }
+
+        h1>a::after {
+            content: ".co";
+            color: $red;
+        }
+
+        h2 {
+            font-size: .7em;
+            color: $white;
+            opacity: .8;
+            font-style: italic;
+            position: absolute;
+            bottom: .15em;
+            font-weight: normal;
+        }
+    }
+
+    &__nav-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__hamburger {
+        position: absolute;
+        right: 5rem;
+        background-color: transparent;
+        z-index: 100;
+        cursor: pointer;
+        border: none;
+        font-size: 2rem;
+        display: none;
+        padding: .5rem 1rem;
+        color: $white;
+        right: 1rem;
+        top: 0rem;
+        transition: all .25s;
+
+        @media screen and (max-width: 1024px) {
+            display: block;
+        }
+    }
+
+    &__hamburger.open {
+        opacity: 0;
+        right: -10rem;
+    }
+
+    &__hamburger::before {
+        content: "\2261";
+    }
+
+    &__nav-container {
+        display: flex;
+
+        a,
+        p {
+            padding: 1rem;
+            display: block;
+            color: white;
+            transition: all .15s;
+            font-style: italic;
+        }
+
+        p {
+            cursor: default;
+            font-style: normal;
+        }
+
+        a:hover {
+            color: rgba(204, 204, 204, 0.877);
+        }
+
+        // Modal Nav Styling
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;
+            position: fixed;
+            background-color: $red;
+            top: 0;
+            height: 100%;
+            width: 11rem;
+            row-gap: 2rem;
+            padding: 1.5rem 0 1.5rem 1rem;
+            right: -20rem;
+            transition: all .25s;
+            display: flex;
+
+            a {
+                color: $off-white
+            }
+
+            a:hover {
+                color: $white;
+            }
+
+            li:nth-child(4) {
+                display: none;
+            }
+        }
+    }
+
+    &__topbar.open {
+        background-color: $white;
+        box-shadow: 0px 0px .5rem rgba(0, 0, 0, 0.39);
+
+        * {
+            color: $mid-black;
+        }
+    }
+
+    &__title-container {
+
+        * {
+            color: $mid-black;
+        }
+    }
+
+    &__nav-container.open {
+        a:hover {
+            color: rgba(223, 223, 223, 0.877);
+        }
+
+        @media screen and (max-width: 1024px) {
+            right: 0;
+
+            * {
+                color: $white
+            }
+        }
+    }
+}
+
+.footer {
+    background: linear-gradient(90deg, rgba(41, 38, 38, 1) 0%, $mid-black 100%);
+    position: relative;
+    z-index: 51;
+    padding: 2rem 2rem;
+
+    * {
+        color: $white;
+        font-weight: normal;
+    }
+
+    &__links-container {
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        ul {
+            margin: 1rem 2rem;
+        }
+
+        h2 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-bottom: 1rem;
+        }
+
+        li>a {
+            color: rgb(199, 199, 199);
+            font-size: .9rem;
+            transition: all .15s;
+        }
+
+        li>a:hover {
+            color: rgb(117, 117, 117);
+        }
+
+        button {
+            @include button;
+            @include cta-btn;
+            padding: .5rem .5rem;
+            margin-top: 1rem;
+        }
+
+        button:hover {
+            background-color: darkred;
+        }
+    }
+
+    &__socials-container {
+        margin-top: 1rem;
+        line-height: 1.5;
+        width: 1.5rem;
+        transition: all .15s;
+        filter: invert(70%) sepia(90%) saturate(1%) hue-rotate(93deg) brightness(96%) contrast(90%);
+
+        a:hover {
+            filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(293deg) brightness(109%) contrast(101%);
+        }
+    }
+}

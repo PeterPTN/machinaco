@@ -1,0 +1,203 @@
+@use "imports" as *;
+
+.hero {
+    &__about-section-container {
+        padding-top: 3.6rem;
+        background-color: $white;
+        background-image: url("../images/services/meeting.jpg"), linear-gradient(to top, rgba(27, 27, 26, 0.788), 80%, rgb(100, 50, 21));
+        background-blend-mode: multiply;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        column-gap: 2rem;
+
+        @media screen and (max-width: 1350px) {
+            flex-direction: column;
+            padding-top: 7rem;
+            row-gap: 5rem;
+            text-align: center;
+        }
+    }
+
+
+    &__about-blurb-container {
+        flex: 2;
+        padding: 1rem 0 2rem 12rem;
+        line-height: 1.5;
+
+        * {
+            color: $white;
+        }
+
+        h1 {
+            @include h2;
+            font-size: 1.5rem;
+            color: $red;
+        }
+
+        h2 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: normal;
+            font-size: 1.75rem;
+            color: $white;
+        }
+
+        @media screen and (max-width: 1350px) {
+            padding: 0 4rem;
+        }
+
+        @media screen and (max-width: 1024px) {
+            padding: 0 2rem;
+
+            h2 {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    &__about-milestone-container {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: 25rem;
+        margin-left: 5rem;
+
+        h3,
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0 .5rem;
+            text-align: center;
+        }
+
+        h3 {
+            font-weight: normal;
+            font-size: 2rem;
+        }
+
+        @media screen and (max-width: 1350px) {
+            margin-left: 0;
+        }
+    }
+
+    &__about-milestone-card {
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 9rem;
+        flex: 1;
+        row-gap: .5rem;
+    }
+
+    &__about-milestone-card.one {
+        background-color: $blue;
+    }
+
+    &__about-milestone-card.two {
+        background-color: $red;
+    }
+
+    &__about-milestone-card.three {
+        background-color: $mid-black;
+    }
+}
+
+/* Main-About */
+.main.--about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    margin: 3rem 0;
+}
+
+.main {
+    &__about-header {
+        text-align: center;
+
+        h1 {
+            @include h1;
+            font-size: 2rem;
+            letter-spacing: -2px;
+            padding: 1rem 10vw;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            @include borderbottom;
+        }
+
+        h2 {
+            @include h2;
+            padding: 1rem 0;
+            margin-bottom: 3rem;
+        }
+
+
+        @media screen and (max-width: 1024px) {
+            h1 {
+                text-align: center;
+                padding: 1.5rem 0;
+                margin: 1rem;
+            }
+        }
+    }
+
+    &__about-blurb-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 4rem;
+        margin: 0rem 10rem 4rem;
+        flex-wrap: wrap;
+
+        h2 {
+            font-weight: normal;
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            line-height: 1.75;
+            color: rgb(70, 70, 70);
+            text-indent: 1rem;
+        }
+
+        @media screen and (max-width: 1750px) {
+            margin: 4rem;
+        }
+
+        @media screen and (max-width: 1024px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__about-blurb-card {
+        border-left: 2px solid $red;
+        flex: 1;
+        padding: 1rem 4rem 1rem;
+    }
+
+    &__about-button {
+        @include button;
+        @include cta-btn;
+        margin-top: 2rem;
+
+        a {
+            font-size: 1.25rem;
+            color: $white;
+        }
+    }
+
+    &__about-button:hover {
+        background-color: darkred;
+    }
+
+    &__about-contact {
+        background-color: $mid-black;
+        height: 10vh;
+        width: 100%;
+    }
+}

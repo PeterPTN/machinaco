@@ -11,8 +11,8 @@ const navMenu = document.getElementsByClassName("hero__nav-container")[0];
 const navbar = document.getElementsByClassName("hero__topbar")[0];
 
 function getScrollValues() {
-    window.addEventListener("scroll", (event) => {
-        event.path[1].scrollY > 50 ? navbar.classList.add("open") : navbar.classList.remove("open");
+    window.addEventListener("scroll", () => {
+        window.scrollY > 50 ? navbar.classList.add("open") : navbar.classList.remove("open");
     })
 }
 

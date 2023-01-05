@@ -54,6 +54,10 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+
+        @media screen and (max-width: 1030px) {
+            display: none;
+        }
     }
 
     &__address-wrapper {
@@ -171,6 +175,10 @@
 
             background-clip: padding-box, border-box;
             background-origin: border-box;
+        }
+
+        @media screen and (max-width: 800px) {
+            padding: 1.5rem;
         }
     }
 

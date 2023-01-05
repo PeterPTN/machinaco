@@ -1188,6 +1188,11 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 1030px) {
+  .main__enquiry-image {
+    display: none;
+  }
+}
 .main__address-wrapper {
   display: flex;
   background-color: rgb(224, 224, 224);
@@ -1287,6 +1292,11 @@ body {
   background-image: linear-gradient(Canvas, Canvas), linear-gradient(rgb(226, 177, 177), rgb(179, 167, 169));
   background-clip: padding-box, border-box;
   background-origin: border-box;
+}
+@media screen and (max-width: 800px) {
+  .main__staff-wrapper {
+    padding: 1.5rem;
+  }
 }
 .main__staff-container {
   display: grid;
